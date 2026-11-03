@@ -1,0 +1,12 @@
+# Local simulation caches and temporary output
+/tests/work*/
+/tests/transcript
+/tests/*.log
+/tests/*.wlf
+/tests/*_output.hex
+/reports/simulation_run.log
+**/__pycache__/
+*.pyc
+*.tmp
+Thumbs.db
+.DS_Store

@@ -1,0 +1,149 @@
+Created by          : Tang Dynasty v6.2.168116
+                    : Copyright (c) 2012-2025 Anlogic Inc.
+Generated           : Mon Nov  2 21:15:07 2026
+
+Top Model           : design_top_wrapper
+Device              : PH1P35MDG324
+Speed               : 3
+STA coverage        : 94.23%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     sys_clk_50m -> sys_clk_50m
+Type           :     Self
+From Clock     :     sys_clk_50m
+To Clock       :     sys_clk_50m
+Min Period     :     1.000ns
+Fmax           :     1000.000MHz
+
+Statistics:
+Max            : SWNS     19.477ns, STNS      0.000ns,         0 Viol Endpoints,         1 Total Endpoints,         1 Paths Analyzed
+Min            : HWNS      0.084ns, HTNS      0.000ns,         0 Viol Endpoints,         1 Total Endpoints,         1 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 19.477ns
+Begin Point         : u_board_io/u_status_mailbox/request_sync_reg[0]_syn_2.clk (rising edge triggered by clock sys_clk_50m  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_board_io/u_status_mailbox/request_sync_reg[1]_syn_2.imb (rising edge triggered by clock sys_clk_50m  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 20.000ns { sys_clk_50m rising@20.000ns - sys_clk_50m rising@0.000ns }
+Data Path Delay     : 0.409ns (cell 0.215ns (52%), net 0.194ns (48%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.050ns (sdc uncertainty: 0.000ns, default uncertainty: 0.050ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.810          0.810          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.684          1.494          pin: I_sys_clk_syn_7.di
+net (fo=3)                              0.578          2.072          net: I_sys_clk_dup_6,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: I_sys_clk_dup_6_created_gclkinst.clkin[0]
+GCLK                x023y039z22         0.016          2.088          pin: I_sys_clk_dup_6_created_gclkinst.clkout
+net (fo=4)                              0.384          2.472          net: I_sys_clk_syn_8,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5.clkin
+SCLK                x023y059z16         0.079          2.551          pin: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5.clkout
+net (fo=45)                             0.640          3.191          net: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_board_io/u_status_mailbox/request_sync_reg[0]_syn_2.clk
+launch edge                             0.000    r     3.191               
+--------------------------------------------------------------------  ---------------
+clk2q               x029y046z2          0.137    r     3.328          pin: u_board_io/u_status_mailbox/request_sync_reg[0]_syn_2.oqb
+net (fo=1)                              0.194          3.522          net: u_board_io/u_status_mailbox/request_sync[0],  ../../../user_source/hdl_source/contest_board_io.v(126)
+                                                                      pin: u_board_io/u_status_mailbox/request_sync_reg[1]_syn_2.imb
+reg                 x029y046z0          0.078    r     3.600          net: u_board_io/u_status_mailbox/request_sync[1],  ../../../user_source/hdl_source/contest_board_io.v(126)
+--------------------------------------------------------------------  ---------------
+Arrival                                                3.600               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.745          0.745          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.629          1.374          pin: I_sys_clk_syn_7.di
+net (fo=3)                              0.496          1.870          net: I_sys_clk_dup_6,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: I_sys_clk_dup_6_created_gclkinst.clkin[0]
+GCLK                x023y039z22         0.014          1.884          pin: I_sys_clk_dup_6_created_gclkinst.clkout
+net (fo=4)                              0.329          2.213          net: I_sys_clk_syn_8,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5.clkin
+SCLK                x023y059z16         0.068          2.281          pin: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5.clkout
+net (fo=45)                             0.557          2.838          net: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_board_io/u_status_mailbox/request_sync_reg[1]_syn_2.clk
+capture edge                           20.000    r    22.838               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         22.774               
+clock uncertainty                      -0.050         22.724               
+clock pessimism                         0.353         23.077               
+--------------------------------------------------------------------  ---------------
+Required                                              23.077               
+--------------------------------------------------------------------  ---------------
+Slack                                                 19.477               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 0.084ns
+Begin Point         : u_board_io/u_status_mailbox/request_sync_reg[0]_syn_2.clk (rising edge triggered by clock sys_clk_50m  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+End Point           : u_board_io/u_status_mailbox/request_sync_reg[1]_syn_2.imb (rising edge triggered by clock sys_clk_50m  { rise@0.000000ns  fall@10.000000ns  period=20.000000 })
+Check Type          : hold
+Process             : fast_m40c
+Budget              : 0.000ns { sys_clk_50m rising@0.000ns - sys_clk_50m rising@0.000ns }
+Data Path Delay     : 0.146ns (cell 0.091ns (62%), net 0.055ns (38%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.050ns (sdc uncertainty: 0.000ns, default uncertainty: 0.050ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.810          0.810          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.257          1.067          pin: I_sys_clk_syn_7.di
+net (fo=3)                              0.223          1.290          net: I_sys_clk_dup_6,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: I_sys_clk_dup_6_created_gclkinst.clkin[0]
+GCLK                x023y039z22         0.006          1.296          pin: I_sys_clk_dup_6_created_gclkinst.clkout
+net (fo=4)                              0.140          1.436          net: I_sys_clk_syn_8,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5.clkin
+SCLK                x023y059z16         0.025          1.461          pin: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5.clkout
+net (fo=45)                             0.228          1.689          net: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_board_io/u_status_mailbox/request_sync_reg[0]_syn_2.clk
+launch edge                             0.000    r     1.689               
+--------------------------------------------------------------------  ---------------
+clk2q               x029y046z2          0.065    r     1.754          pin: u_board_io/u_status_mailbox/request_sync_reg[0]_syn_2.oqb
+net (fo=1)                              0.055          1.809          net: u_board_io/u_status_mailbox/request_sync[0],  ../../../user_source/hdl_source/contest_board_io.v(126)
+                                                                      pin: u_board_io/u_status_mailbox/request_sync_reg[1]_syn_2.imb
+reg                 x029y046z0          0.026    f     1.835          net: u_board_io/u_status_mailbox/request_sync[1],  ../../../user_source/hdl_source/contest_board_io.v(126)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.835               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.915          0.915          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.290          1.205          pin: I_sys_clk_syn_7.di
+net (fo=3)                              0.241          1.446          net: I_sys_clk_dup_6,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: I_sys_clk_dup_6_created_gclkinst.clkin[0]
+GCLK                x023y039z22         0.007          1.453          pin: I_sys_clk_dup_6_created_gclkinst.clkout
+net (fo=4)                              0.152          1.605          net: I_sys_clk_syn_8,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5.clkin
+SCLK                x023y059z16         0.030          1.635          pin: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5.clkout
+net (fo=45)                             0.251          1.886          net: I_sys_clk_dup_6_created_gclkinst_auto_created_sclk_s_1_r_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_board_io/u_status_mailbox/request_sync_reg[1]_syn_2.clk
+capture edge                            0.000    r     1.886               
+--------------------------------------------------------------------  ---------------
+hold                                    0.012          1.898               
+clock uncertainty                       0.050          1.948               
+clock pessimism                        -0.197          1.751               
+--------------------------------------------------------------------  ---------------
+Required                                               1.751               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.084               
+
+
+
+

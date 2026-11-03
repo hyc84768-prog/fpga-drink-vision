@@ -1,0 +1,161 @@
+Created by          : Tang Dynasty v6.2.168116
+                    : Copyright (c) 2012-2025 Anlogic Inc.
+Generated           : Mon Nov  2 21:15:07 2026
+
+Top Model           : design_top_wrapper
+Device              : PH1P35MDG324
+Speed               : 3
+STA coverage        : 94.23%
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     HDMI_PIXEL_CLK -> HDMI_PIXEL_CLK
+Type           :     Self
+From Clock     :     HDMI_PIXEL_CLK
+To Clock       :     HDMI_PIXEL_CLK
+Min Period     :     1.000ns
+Fmax           :     1000.000MHz
+
+Statistics:
+Max            : SWNS     12.851ns, STNS      0.000ns,         0 Viol Endpoints,         1 Total Endpoints,         1 Paths Analyzed
+Min            : HWNS      0.137ns, HTNS      0.000ns,         0 Viol Endpoints,         1 Total Endpoints,         1 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 12.851ns
+Begin Point         : u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.ima (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 13.333ns { HDMI_PIXEL_CLK rising@13.333ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 0.418ns (cell 0.224ns (53%), net 0.194ns (47%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.810          0.810          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.684          1.494          pin: I_sys_clk_syn_7.di
+net (fo=3)          x043y079            0.115          1.609          net: I_sys_clk_dup_6,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x043y079           -1.645         -0.036          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.825          0.789          net: u_hdmi_mixer/u_contest_image_core/clk,  ../../../user_source/hdl_source/contest_image_core.v(11)
+                                                                      pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst.clkin[0]
+GCLK                x023y039z16         0.016          0.805          pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst.clkout
+net (fo=4)                              0.385          1.190          net: u_hdmi_mixer/u_contest_image_core/clk_syn_654,  ../../../user_source/hdl_source/contest_image_core.v(11)
+                                                                      pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2.clkin
+SCLK                x023y059z13         0.079          1.269          pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2.clkout
+net (fo=841)                            0.640          1.909          net: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.clk
+launch edge                             0.000    r     1.909               
+--------------------------------------------------------------------  ---------------
+clk2q               x029y048z1          0.137    r     2.046          pin: u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.oqb
+net (fo=1)                              0.194          2.240          net: u_board_io/u_status_mailbox/ack_sync[0],  ../../../user_source/hdl_source/contest_board_io.v(126)
+                                                                      pin: u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.ima
+reg                 x029y048z1          0.087    r     2.327          net: u_board_io/u_status_mailbox/ack_sync[1],  ../../../user_source/hdl_source/contest_board_io.v(126)
+--------------------------------------------------------------------  ---------------
+Arrival                                                2.327               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.745          0.745          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.629          1.374          pin: I_sys_clk_syn_7.di
+net (fo=3)          x043y079            0.099          1.473          net: I_sys_clk_dup_6,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x043y079           -1.411          0.062          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.707          0.769          net: u_hdmi_mixer/u_contest_image_core/clk,  ../../../user_source/hdl_source/contest_image_core.v(11)
+                                                                      pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst.clkin[0]
+GCLK                x023y039z16         0.014          0.783          pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst.clkout
+net (fo=4)                              0.330          1.113          net: u_hdmi_mixer/u_contest_image_core/clk_syn_654,  ../../../user_source/hdl_source/contest_image_core.v(11)
+                                                                      pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2.clkin
+SCLK                x023y059z13         0.068          1.181          pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2.clkout
+net (fo=841)                            0.557          1.738          net: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.clk
+capture edge                           13.333    r    15.071               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         15.007               
+clock uncertainty                       0.000         15.007               
+clock pessimism                         0.171         15.178               
+--------------------------------------------------------------------  ---------------
+Required                                              15.178               
+--------------------------------------------------------------------  ---------------
+Slack                                                 12.851               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 0.137ns
+Begin Point         : u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.ima (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : hold
+Process             : fast_m40c
+Budget              : 0.000ns { HDMI_PIXEL_CLK rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 0.149ns (cell 0.094ns (63%), net 0.055ns (37%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.000ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.810          0.810          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.257          1.067          pin: I_sys_clk_syn_7.di
+net (fo=3)          x043y079            0.040          1.107          net: I_sys_clk_dup_6,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x043y079           -0.620          0.487          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.311          0.798          net: u_hdmi_mixer/u_contest_image_core/clk,  ../../../user_source/hdl_source/contest_image_core.v(11)
+                                                                      pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst.clkin[0]
+GCLK                x023y039z16         0.006          0.804          pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst.clkout
+net (fo=4)                              0.140          0.944          net: u_hdmi_mixer/u_contest_image_core/clk_syn_654,  ../../../user_source/hdl_source/contest_image_core.v(11)
+                                                                      pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2.clkin
+SCLK                x023y059z13         0.025          0.969          pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2.clkout
+net (fo=841)                            0.226          1.195          net: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.clk
+launch edge                             0.000    r     1.195               
+--------------------------------------------------------------------  ---------------
+clk2q               x029y048z1          0.065    r     1.260          pin: u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.oqb
+net (fo=1)                              0.055          1.315          net: u_board_io/u_status_mailbox/ack_sync[0],  ../../../user_source/hdl_source/contest_board_io.v(126)
+                                                                      pin: u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.ima
+reg                 x029y048z1          0.029    f     1.344          net: u_board_io/u_status_mailbox/ack_sync[1],  ../../../user_source/hdl_source/contest_board_io.v(126)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.344               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.915          0.915          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.290          1.205          pin: I_sys_clk_syn_7.di
+net (fo=3)          x043y079            0.043          1.248          net: I_sys_clk_dup_6,  ../../../user_source/hdl_source/design_top_wrapper.v(4)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x043y079           -0.675          0.573          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.338          0.911          net: u_hdmi_mixer/u_contest_image_core/clk,  ../../../user_source/hdl_source/contest_image_core.v(11)
+                                                                      pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst.clkin[0]
+GCLK                x023y039z16         0.007          0.918          pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst.clkout
+net (fo=4)                              0.152          1.070          net: u_hdmi_mixer/u_contest_image_core/clk_syn_654,  ../../../user_source/hdl_source/contest_image_core.v(11)
+                                                                      pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2.clkin
+SCLK                x023y059z13         0.030          1.100          pin: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2.clkout
+net (fo=841)                            0.249          1.349          net: u_hdmi_mixer/u_contest_image_core/clk_created_gclkinst_auto_created_sclk_s_1_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_board_io/u_status_mailbox/ack_sync_reg[1]_syn_2.clk
+capture edge                            0.000    r     1.349               
+--------------------------------------------------------------------  ---------------
+hold                                    0.012          1.361               
+clock uncertainty                       0.000          1.361               
+clock pessimism                        -0.154          1.207               
+--------------------------------------------------------------------  ---------------
+Required                                               1.207               
+--------------------------------------------------------------------  ---------------
+Slack                                                  0.137               
+
+
+
+

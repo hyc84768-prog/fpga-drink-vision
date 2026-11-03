@@ -1,0 +1,8 @@
+# Preserve the delivered file bytes and checksums.
+* -text
+*.bit binary
+*.db binary
+*.jpg binary
+*.png binary
+reports/** linguist-generated=true
+user_source/ip_source/** linguist-vendored=true
